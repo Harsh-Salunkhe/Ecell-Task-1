@@ -16,7 +16,7 @@ function Home(props) {
     phone: "",
   });
 
-  // ✅ Prefill form if editing
+
   useEffect(() => {
     if (memberToEdit) {
       setDetails({
@@ -27,7 +27,7 @@ function Home(props) {
         insta: memberToEdit.insta,
         phone: memberToEdit.phone,
       });
-      setImage(null); // Optional: allow updating image
+      setImage(null); 
     }
   }, [memberToEdit]);
 
@@ -79,7 +79,7 @@ function Home(props) {
 
   return (
     <div>
-      {/* Header */}
+    
       <div className="bg-black flex items-center justify-between px-4 md:px-10 py-4 border-b border-yellow-500">
         <div className="flex items-center space-x-2">
           <img src={Logo} alt="Logo" className="w-10 h-10 object-contain" />
@@ -92,7 +92,6 @@ function Home(props) {
         </button>
       </div>
 
-      {/* Form */}
       <div className="min-h-screen flex items-center justify-center bg-black">
         <form
           onSubmit={handleSubmit}
